@@ -16,9 +16,15 @@ const ProductDetail = lazy(()=> import("./components/ProductDetail"));
 const NotFound = lazy(()=> import("./components/NotFound"));
 
 function App() {
+
+  const basename =
+    process.env.NODE_ENV === "production"
+      ? "/ShoppyGlobe-E-commerce-Application-"
+      : "";
+
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename={basename}>
         {/* Header component - contains navigation links */}
         <Header/>
         <Suspense fallback={<p>Loading...</p>}>
