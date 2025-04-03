@@ -1,1 +1,0 @@
-import{r as t}from"./index-o-V3xHpe.js";const h=e=>{const[s,r]=t.useState(null),[o,n]=t.useState(null),[c,u]=t.useState(!0);return t.useEffect(()=>{(async()=>{try{const f=await(await fetch(e)).json();r(f)}catch(a){n(a)}finally{u(!1)}})()},[e]),{data:s,error:o,loading:c}};export{h as u};
